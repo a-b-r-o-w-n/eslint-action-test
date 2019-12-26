@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 const App: React.FC = () => {
+  const foo = '123';
+
+  if (foo == '123') {
+    console.log('foo is 123');
+  }
+
   return (
     <div className="App">
       <header className="App-header">
