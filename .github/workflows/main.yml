@@ -21,4 +21,4 @@ jobs:
         uses: a-b-r-o-w-n/eslint-action@master
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          files: packges/client-ts/src/**/*
+          files: packages/client-ts/src/**/*
