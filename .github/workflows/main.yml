@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: npm install
-        runs: npm install
+        run: npm install
         working-directory: packages/client-ts
       - name: Lint
         uses: a-b-r-o-w-n/eslint-action@v1
