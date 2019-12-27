@@ -18,7 +18,8 @@ jobs:
         run: npm install
         working-directory: packages/client-ts
       - name: Lint
-        uses: a-b-r-o-w-n/eslint-action@master
+        uses: a-b-r-o-w-n/eslint-action@5a891db
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           files: packages/client-ts/src/**/*
+          working-directory: packages/client-ts
