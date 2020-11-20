@@ -23,23 +23,3 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           files: packages/client-ts/src/**/*
           working-directory: packages/client-ts
-  test-v2:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            node-
-      - name: npm install
-        run: npm install
-        working-directory: packages/client-ts
-      - name: Lint
-        uses: a-b-r-o-w-n/eslint-action@new-v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          files: packages/client-ts/src/**/*
-          working-directory: packages/client-ts
