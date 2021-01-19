@@ -1,0 +1,15 @@
+name: Workflow Test
+
+on: workflow_dispatch
+
+jobs:
+  test:
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create report file
+        run: date +%s > report.txt
+      - name: Commit file
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git commit -am "Automated commit"
+          git push
