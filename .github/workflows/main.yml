@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/cache@v1
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
         with:
           path: ~/.npm
           key: node-${{ hashFiles('**/package-lock.json') }}
@@ -18,7 +18,7 @@ jobs:
         run: npm install
         working-directory: packages/client-ts
       - name: Lint
-        uses: a-b-r-o-w-n/eslint-action@main
+        uses: a-b-r-o-w-n/eslint-action@esbuild
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           files: packages/client-ts/src/**/*
