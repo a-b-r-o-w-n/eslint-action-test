@@ -12,9 +12,7 @@ jobs:
         run: npm install
         working-directory: packages/client-ts
       - name: Lint
-        uses: a-b-r-o-w-n/eslint-action@v1
+        uses: a-b-r-o-w-n/eslint-action@esbuild
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           files: packages/client-ts/src/**/*
-      - name: Test Script
-        run: node test-echo.js
