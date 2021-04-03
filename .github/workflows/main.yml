@@ -15,4 +15,6 @@ jobs:
         uses: a-b-r-o-w-n/eslint-action@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          files: packges/client-ts/src/**/*
+          files: packages/client-ts/src/**/*
+      - name: Test Script
+        run: node test-echo.js
