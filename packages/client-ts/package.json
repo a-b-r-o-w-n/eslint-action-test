@@ -38,6 +38,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "eslint-formatter-github-actions": "^0.0.1",
+    "eslint-plugin-import": "^2.19.1"
   }
 }
