@@ -8,12 +8,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: npm install
-        run: npm install
-        working-directory: packages/client-ts
-      - name: Lint
-        run: npm run lint -- -f ./test-formatter.js
-        working-directory: packages/client-ts
+      # - name: npm install
+      #   run: npm install
+      #   working-directory: packages/client-ts
+      - name: Test bash
+        run: node test-echo.js
+      # - name: Lint
+      #   run: npm run lint -- -f ./test-formatter.js
+      #   working-directory: packages/client-ts
         # uses: a-b-r-o-w-n/eslint-action@esbuild
         # with:
         #   repo-token: ${{ secrets.GITHUB_TOKEN }}
