@@ -355,7 +355,7 @@ function formatMessage(filePath, result) {
   if (column) {
     output += `,col=${column}`;
   }
-  output += `::[${ruleId}] ${message}`;
+  output += `::${ruleId} ${message}`;
   return output;
 }
 
