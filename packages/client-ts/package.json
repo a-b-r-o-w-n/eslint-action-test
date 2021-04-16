@@ -38,6 +38,11 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^2.2.1"
   }
 }
