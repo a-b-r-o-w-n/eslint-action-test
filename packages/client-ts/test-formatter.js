@@ -355,7 +355,7 @@ function formatMessage(filePath, result) {
   if (column) {
     output += `,col=${column}`;
   }
-  output += `::${ruleId} ${message}`;
+  output += `::[${ruleId}] ${message}`;
   return output;
 }
 
@@ -370,11 +370,7 @@ function startGroupOnce(groupName) {
 }
 function wrapInGroup(groupName, messages, callback) {
   for (const message of messages) {
-    startGroupOnce(groupName);
     callback(message);
-  }
-  if (groupMap.has(groupName)) {
-    (0, import_core.endGroup)();
   }
 }
 
@@ -390,7 +386,7 @@ function report(results) {
   for (const result of results) {
     const { filePath, messages } = result;
     const relFilePath = getRelativePath(filePath);
-    wrapInGroup(relFilePath, messages, (message) => {
+    for (const message of messages) {
       if (!message.ruleId) {
         return;
       }
@@ -404,7 +400,7 @@ function report(results) {
         default:
           break;
       }
-    });
+    }
   }
 }
 module.exports = report;
