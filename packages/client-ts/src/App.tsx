@@ -6,7 +6,7 @@ const App: React.FC = () => {
   const foo = '123';
 
   if (foo == '123') {
-    console.log('foo is 123');
+    console.log('foo is 123')
   }
 
   return (
