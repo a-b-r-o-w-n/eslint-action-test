@@ -1,12 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 const App: React.FC = () => {
-  const foo = '123';
+  const foo = "123";
 
-  if (foo == '123') {
-    console.log('foo is 123')
+  if (foo == "123") {
+    console.log("foo is 123");
   }
 
   return (
@@ -27,6 +27,6 @@ const App: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;
