@@ -392,10 +392,10 @@ function report(results) {
       }
       switch (message.severity) {
         case 1:
-          (0, import_core2.warning)(formatMessage(relFilePath, message));
+          console.log("::warning", formatMessage(relFilePath, message));
           break;
         case 2:
-          (0, import_core2.error)(formatMessage(relFilePath, message));
+          console.log("::error", formatMessage(relFilePath, message));
           break;
         default:
           break;
