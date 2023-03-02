@@ -11,6 +11,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node-
       - name: npm install
         run: npm install
         working-directory: packages/client-ts
